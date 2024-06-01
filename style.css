@@ -11,6 +11,10 @@ header {
     text-align: center;
 }
 
+.group-members {
+  text-align: center;
+}
+
 nav ul {
     list-style: none;
     margin: 0;

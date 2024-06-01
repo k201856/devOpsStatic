@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Project </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Project </title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home" onclick="showSection('home')" class="active">Home</a></li>
-                <li><a href="#details" onclick="showSection('details')">Details</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="section">
-            <h1>DevOps Project</h1>
-        </section>
-        <section id="details" class="section" style="display: none;">
-            <p>This is a DevOps project using ci/cd.</p>
-        </section>
-    </main>
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach((section) => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`nav a[href="#${sectionId}"]`).classList.add('active');
-        }
-    </script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showSection('home')" class="active">Home</a></li>
+        <li><a href="#details" onclick="showSection('details')">Details</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="section">
+      <h1>DevOps Project</h1>
+      <p class="group-members">
+        <br><br><strong>Group Members:</strong><br><br>
+        Muhammad Aaliyan Khan (20K-1856) <br>
+        Syed Ahzam Imam (20K-1612) <br>
+        Bilal Shahid (20K-0173)
+      </p>
+    </section>
+    <section id="details" class="section" style="display: none;">
+      <h2>Project Details</h2>
+      <p>This is a DevOps project showcasing the implementation of various tools and techniques covered throughout the
+        course.
+        It utilizes both GitHub and Azure DevOps for efficient development and deployment.</p>
+      <h3>Required Components:</h3>
+      <ul>
+        <li><strong>Source Code Repository:</strong> GitHub (at least 2 repositories)</li>
+        <li><strong>Continuous Integration (CI Pipeline):</strong> Automates building, testing, and packaging of code
+          changes.
+        </li>
+        <li><strong>Unit Testing (at least 5 test cases) or Automated Testing Scripts (Selenium):</strong> Ensures code
+          quality and functionality.</li>
+        <li><strong>Continuous Deployment/Delivery (CD Pipeline):</strong> Automates deployment of code changes to
+          different
+          environments.</li>
+        <li><strong>Release Gates:</strong> Implement quality checks and approvals before deployments.</li>
+        <li><strong>Integration with Azure DevOps Dashboard:</strong> Provides real-time insights into the project
+          pipeline.
+        </li>
+        <li><strong>Integration with Slack:</strong> Enables real-time communication and notifications.</li>
+        <li><strong>Deployment Strategy: Deployment Rings (Slow, Fast, Production):</strong> Phased deployment for
+          controlled
+          releases.</li>
+        <li><strong>Containerization:</strong> Packages applications into self-contained units for portability and
+          scalability.</li>
+        <li><strong>Infrastructure as Code:</strong> Automates infrastructure provisioning and management.</li>
+      </ul>
+      <h3>Deliverables:</h3>
+      <ul>
+        <li>Video covering all aspects of the project.</li>
+        <li>Presentation (ppt) file.</li>
+        <li>Group Size: 3 Members</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((section) => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+      });
+      document.querySelector(`nav a[href="#${sectionId}"]`).classList.add('active');
+    }
+  </script>
 </body>
+
 </html>
